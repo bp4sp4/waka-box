@@ -15,5 +15,5 @@ jobs:
         env:
           GH_TOKEN: ${{ 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 }}
           GIST_ID: 0b47f382c35ce9d51b4754f431cabbf8
-          WAKATIME_API_KEY: ${{ waka_b2ec9248-7ab8-4511-90cd-78061f90594e }}
+          WAKATIME_API_KEY: ${{ waka_282d7ca0-4f94-4695-b4be-e4eec9407650 }}
           TIMEZONE: Asia/Seoul
