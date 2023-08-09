@@ -1,9 +1,10 @@
 name: Update gist with WakaTime stats
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "0 0 * * *"
-  # Manual triggers with workflow_dispatch
-  workflow_dispatch:
 jobs:
   update-gist:
     runs-on: ubuntu-latest
@@ -12,6 +13,7 @@ jobs:
       - name: Update gist
         uses: matchai/waka-box@master
         env:
-          GH_TOKEN: ${{ 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 }}
-          GIST_ID: waka
-          WAKATIME_API_KEY: ${{ waka_361ec07d-f488-4321-ba27-54b32dfae717 }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          TIMEZONE: Asia/Seoul
